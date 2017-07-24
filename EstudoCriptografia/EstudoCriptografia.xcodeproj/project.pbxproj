@@ -1,0 +1,409 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9864970B1F22AD2500A546E2 /* FileManagerActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9864970A1F22AD2500A546E2 /* FileManagerActions.swift */; };
+		986EB27A1F1FED0300A373BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986EB2791F1FED0300A373BB /* AppDelegate.swift */; };
+		986EB27C1F1FED0300A373BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986EB27B1F1FED0300A373BB /* ViewController.swift */; };
+		986EB2821F1FED0300A373BB /* EstudoCriptografia.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 986EB2801F1FED0300A373BB /* EstudoCriptografia.xcdatamodeld */; };
+		986EB2841F1FED0300A373BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 986EB2831F1FED0300A373BB /* Assets.xcassets */; };
+		986EB2871F1FED0300A373BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 986EB2851F1FED0300A373BB /* LaunchScreen.storyboard */; };
+		986EB28F1F2004D100A373BB /* teste.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 986EB28E1F2004D100A373BB /* teste.pdf */; };
+		986EB2911F2005E900A373BB /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 986EB2901F2005E900A373BB /* MainView.xib */; };
+		98905A5E1F20FD1B00E8E06F /* SavePDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98905A5D1F20FD1B00E8E06F /* SavePDFViewController.swift */; };
+		98905A601F20FD2900E8E06F /* ShowPDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98905A5F1F20FD2900E8E06F /* ShowPDFViewController.swift */; };
+		98A06A511F2630CA005CEC59 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A06A501F2630CA005CEC59 /* MainView.swift */; };
+		98A06A531F26395E005CEC59 /* Dismissable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A06A521F26395E005CEC59 /* Dismissable.swift */; };
+		98A06A551F26415C005CEC59 /* ListPDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A06A541F26415C005CEC59 /* ListPDFViewController.swift */; };
+		98A06A591F264258005CEC59 /* ListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98A06A581F264258005CEC59 /* ListView.xib */; };
+		98A06A5E1F26467A005CEC59 /* PDFViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98A06A5D1F26467A005CEC59 /* PDFViewCell.xib */; };
+		98A06A601F26708D005CEC59 /* ShowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98A06A5F1F26708D005CEC59 /* ShowView.xib */; };
+		98A06A671F267F8B005CEC59 /* SaveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98A06A661F267F8B005CEC59 /* SaveView.xib */; };
+		98A06A691F267F95005CEC59 /* SaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A06A681F267F95005CEC59 /* SaveView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9864970A1F22AD2500A546E2 /* FileManagerActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManagerActions.swift; sourceTree = "<group>"; };
+		986EB2761F1FED0300A373BB /* EstudoCriptografia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EstudoCriptografia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		986EB2791F1FED0300A373BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		986EB27B1F1FED0300A373BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		986EB2811F1FED0300A373BB /* EstudoCriptografia.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EstudoCriptografia.xcdatamodel; sourceTree = "<group>"; };
+		986EB2831F1FED0300A373BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		986EB2861F1FED0300A373BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		986EB2881F1FED0300A373BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		986EB28E1F2004D100A373BB /* teste.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = teste.pdf; sourceTree = "<group>"; };
+		986EB2901F2005E900A373BB /* MainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
+		98905A5D1F20FD1B00E8E06F /* SavePDFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavePDFViewController.swift; sourceTree = "<group>"; };
+		98905A5F1F20FD2900E8E06F /* ShowPDFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowPDFViewController.swift; sourceTree = "<group>"; };
+		98A06A501F2630CA005CEC59 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		98A06A521F26395E005CEC59 /* Dismissable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dismissable.swift; sourceTree = "<group>"; };
+		98A06A541F26415C005CEC59 /* ListPDFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListPDFViewController.swift; sourceTree = "<group>"; };
+		98A06A581F264258005CEC59 /* ListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListView.xib; sourceTree = "<group>"; };
+		98A06A5D1F26467A005CEC59 /* PDFViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PDFViewCell.xib; sourceTree = "<group>"; };
+		98A06A5F1F26708D005CEC59 /* ShowView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowView.xib; sourceTree = "<group>"; };
+		98A06A661F267F8B005CEC59 /* SaveView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SaveView.xib; sourceTree = "<group>"; };
+		98A06A681F267F95005CEC59 /* SaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		986EB2731F1FED0300A373BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		986EB26D1F1FED0300A373BB = {
+			isa = PBXGroup;
+			children = (
+				986EB2781F1FED0300A373BB /* EstudoCriptografia */,
+				986EB2771F1FED0300A373BB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		986EB2771F1FED0300A373BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				986EB2761F1FED0300A373BB /* EstudoCriptografia.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		986EB2781F1FED0300A373BB /* EstudoCriptografia */ = {
+			isa = PBXGroup;
+			children = (
+				98A06A641F267CCC005CEC59 /* Save PDF */,
+				98A06A631F267CC7005CEC59 /* List PDF */,
+				98A06A621F267CBB005CEC59 /* Show PDF */,
+				98A06A611F267CB7005CEC59 /* Main */,
+				98A06A5B1F26463E005CEC59 /* Protocol */,
+				986EB28E1F2004D100A373BB /* teste.pdf */,
+				986EB2791F1FED0300A373BB /* AppDelegate.swift */,
+				986EB2831F1FED0300A373BB /* Assets.xcassets */,
+				986EB2851F1FED0300A373BB /* LaunchScreen.storyboard */,
+				986EB2881F1FED0300A373BB /* Info.plist */,
+				986EB2801F1FED0300A373BB /* EstudoCriptografia.xcdatamodeld */,
+				9864970A1F22AD2500A546E2 /* FileManagerActions.swift */,
+			);
+			path = EstudoCriptografia;
+			sourceTree = "<group>";
+		};
+		98A06A5B1F26463E005CEC59 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				98A06A521F26395E005CEC59 /* Dismissable.swift */,
+			);
+			name = Protocol;
+			sourceTree = "<group>";
+		};
+		98A06A611F267CB7005CEC59 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				986EB27B1F1FED0300A373BB /* ViewController.swift */,
+				98A06A501F2630CA005CEC59 /* MainView.swift */,
+				986EB2901F2005E900A373BB /* MainView.xib */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		98A06A621F267CBB005CEC59 /* Show PDF */ = {
+			isa = PBXGroup;
+			children = (
+				98905A5F1F20FD2900E8E06F /* ShowPDFViewController.swift */,
+				98A06A5F1F26708D005CEC59 /* ShowView.xib */,
+			);
+			name = "Show PDF";
+			sourceTree = "<group>";
+		};
+		98A06A631F267CC7005CEC59 /* List PDF */ = {
+			isa = PBXGroup;
+			children = (
+				98A06A541F26415C005CEC59 /* ListPDFViewController.swift */,
+				98A06A581F264258005CEC59 /* ListView.xib */,
+				98A06A5D1F26467A005CEC59 /* PDFViewCell.xib */,
+			);
+			name = "List PDF";
+			sourceTree = "<group>";
+		};
+		98A06A641F267CCC005CEC59 /* Save PDF */ = {
+			isa = PBXGroup;
+			children = (
+				98905A5D1F20FD1B00E8E06F /* SavePDFViewController.swift */,
+				98A06A661F267F8B005CEC59 /* SaveView.xib */,
+				98A06A681F267F95005CEC59 /* SaveView.swift */,
+			);
+			name = "Save PDF";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		986EB2751F1FED0300A373BB /* EstudoCriptografia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 986EB28B1F1FED0300A373BB /* Build configuration list for PBXNativeTarget "EstudoCriptografia" */;
+			buildPhases = (
+				986EB2721F1FED0300A373BB /* Sources */,
+				986EB2731F1FED0300A373BB /* Frameworks */,
+				986EB2741F1FED0300A373BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EstudoCriptografia;
+			productName = EstudoCriptografia;
+			productReference = 986EB2761F1FED0300A373BB /* EstudoCriptografia.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		986EB26E1F1FED0300A373BB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Fabio Miciano";
+				TargetAttributes = {
+					986EB2751F1FED0300A373BB = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 4988SF5ZB2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 986EB2711F1FED0300A373BB /* Build configuration list for PBXProject "EstudoCriptografia" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 986EB26D1F1FED0300A373BB;
+			productRefGroup = 986EB2771F1FED0300A373BB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				986EB2751F1FED0300A373BB /* EstudoCriptografia */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		986EB2741F1FED0300A373BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				986EB2911F2005E900A373BB /* MainView.xib in Resources */,
+				986EB2871F1FED0300A373BB /* LaunchScreen.storyboard in Resources */,
+				986EB2841F1FED0300A373BB /* Assets.xcassets in Resources */,
+				986EB28F1F2004D100A373BB /* teste.pdf in Resources */,
+				98A06A591F264258005CEC59 /* ListView.xib in Resources */,
+				98A06A5E1F26467A005CEC59 /* PDFViewCell.xib in Resources */,
+				98A06A601F26708D005CEC59 /* ShowView.xib in Resources */,
+				98A06A671F267F8B005CEC59 /* SaveView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		986EB2721F1FED0300A373BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				986EB2821F1FED0300A373BB /* EstudoCriptografia.xcdatamodeld in Sources */,
+				98A06A511F2630CA005CEC59 /* MainView.swift in Sources */,
+				9864970B1F22AD2500A546E2 /* FileManagerActions.swift in Sources */,
+				98A06A691F267F95005CEC59 /* SaveView.swift in Sources */,
+				986EB27C1F1FED0300A373BB /* ViewController.swift in Sources */,
+				98A06A531F26395E005CEC59 /* Dismissable.swift in Sources */,
+				98A06A551F26415C005CEC59 /* ListPDFViewController.swift in Sources */,
+				98905A5E1F20FD1B00E8E06F /* SavePDFViewController.swift in Sources */,
+				986EB27A1F1FED0300A373BB /* AppDelegate.swift in Sources */,
+				98905A601F20FD2900E8E06F /* ShowPDFViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		986EB2851F1FED0300A373BB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				986EB2861F1FED0300A373BB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		986EB2891F1FED0300A373BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		986EB28A1F1FED0300A373BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		986EB28C1F1FED0300A373BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4988SF5ZB2;
+				INFOPLIST_FILE = EstudoCriptografia/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.infoglobo.EstudoCriptografia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		986EB28D1F1FED0300A373BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4988SF5ZB2;
+				INFOPLIST_FILE = EstudoCriptografia/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.infoglobo.EstudoCriptografia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		986EB2711F1FED0300A373BB /* Build configuration list for PBXProject "EstudoCriptografia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				986EB2891F1FED0300A373BB /* Debug */,
+				986EB28A1F1FED0300A373BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		986EB28B1F1FED0300A373BB /* Build configuration list for PBXNativeTarget "EstudoCriptografia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				986EB28C1F1FED0300A373BB /* Debug */,
+				986EB28D1F1FED0300A373BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		986EB2801F1FED0300A373BB /* EstudoCriptografia.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				986EB2811F1FED0300A373BB /* EstudoCriptografia.xcdatamodel */,
+			);
+			currentVersion = 986EB2811F1FED0300A373BB /* EstudoCriptografia.xcdatamodel */;
+			path = EstudoCriptografia.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 986EB26E1F1FED0300A373BB /* Project object */;
+}
