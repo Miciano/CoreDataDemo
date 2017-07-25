@@ -11,6 +11,7 @@ import Foundation
 final class FileManagerActions {
     
     let fileManager: FileManager
+    let coreData = CoreDataActions()
     
     init(fileManager: FileManager = .default) {
         self.fileManager = fileManager
@@ -30,6 +31,7 @@ final class FileManagerActions {
         if fileManager.createFile(atPath: path, contents: file, attributes: nil) {
             print("-- Arquivo salvo com sucesso --")
             if self.excludeBackUp(path: path) {
+                coreData.savePath(path: path, name: name)
                 print("-- Arquivo removido da listagem de backup com sucesso --")
                 return true
             }

@@ -11,15 +11,15 @@ import UIKit
 
 class ShowPDFViewController: UIViewController {
     
-    let name: String
+    let path: String
     let fileManager = FileManagerActions()
     
     var webView: UIWebView {
         return self.view as! UIWebView
     }
     
-    init(with name: String) {
-        self.name = name
+    init(with path: String) {
+        self.path = path
         super.init(nibName: "ShowView", bundle: Bundle.main)
     }
     
@@ -27,8 +27,7 @@ class ShowPDFViewController: UIViewController {
         super.viewDidLoad()
         
         //Carregando o path do arquivo em formato URLRequest
-        guard let pathDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first else { return }
-        let url = URL(fileURLWithPath: "\(pathDirectory)/\(name)")
+        let url = URL(fileURLWithPath: "\(path)")
         let request = URLRequest(url: url)
         //Fazendo load do PDF em uma webView
         webView.loadRequest(request)

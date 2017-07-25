@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class ListPDFViewController: UIViewController {
     
@@ -16,7 +17,8 @@ class ListPDFViewController: UIViewController {
     }
     
     let fileManager = FileManagerActions()
-    var dataSource = [String]()
+    let coreData = CoreDataActions()
+    var dataSource = [Pdf]()
     
     init() {
         super.init(nibName: "ListView", bundle: Bundle.main)
@@ -26,8 +28,7 @@ class ListPDFViewController: UIViewController {
         super.viewWillAppear(animated)
         //Registro a celula
         self.tableView.register(UINib(nibName: "PDFViewCell", bundle: nil), forCellReuseIdentifier: "pdfCell")
-        //Caso eu consiga um listagem eu atribuo o delegate e o dataSource
-        if let documents = fileManager.listFiles(with: nil) {
+        if let documents = coreData.getData() {
             dataSource = documents
             tableView.dataSource = self
             tableView.delegate = self
@@ -35,8 +36,8 @@ class ListPDFViewController: UIViewController {
     }
     
     //PRAGMA MARK: -- ACTIONS --
-    func showPDFAction(name: String) {
-        let controller = ShowPDFViewController(with: name)
+    func showPDFAction(path: String) {
+        let controller = ShowPDFViewController(with: path)
         navigationController?.pushViewController(controller, animated: true)
     }
     
@@ -54,7 +55,7 @@ extension ListPDFViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let name = dataSource[indexPath.row]
+        let name = dataSource[indexPath.row].name
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "pdfCell") else { return UITableViewCell() }
         cell.textLabel?.text = name
         
@@ -67,6 +68,6 @@ extension ListPDFViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        showPDFAction(name: dataSource[indexPath.row])
+        showPDFAction(path: dataSource[indexPath.row].path!)
     }
 }
