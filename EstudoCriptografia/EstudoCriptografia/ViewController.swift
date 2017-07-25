@@ -11,11 +11,25 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var mainView: MainView {
+        return self.view as! MainView
+    }
+    
     //Load da view
     override func loadView() {
         guard let view = Bundle.main.loadNibNamed("MainView", owner: self, options: nil)?.last as? MainView else { return }
+       
+        self.view = view
+    }
+    
+    init() {
+        super.init(nibName: "MainView", bundle: Bundle.main)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         //Implementação do protocolo descrito na view
-        view.dismissAction = {(action, currentView) in
+        mainView.dismissAction = {(action, currentView) in
             switch action {
             case .save:
                 self.savePDFAction()
@@ -23,11 +37,6 @@ class ViewController: UIViewController {
                 self.listPDFAction()
             }
         }
-        self.view = view
-    }
-    
-    init() {
-        super.init(nibName: nil, bundle: nil)
     }
     
     //PRAGMA MARK: -- ACTIONS --

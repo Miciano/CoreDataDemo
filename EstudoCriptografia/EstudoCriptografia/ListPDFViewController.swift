@@ -18,13 +18,8 @@ class ListPDFViewController: UIViewController {
     let fileManager = FileManagerActions()
     var dataSource = [String]()
     
-    override func loadView() {
-        guard let view = Bundle.main.loadNibNamed("ListView", owner: self, options: nil)?.last as? UITableView else { return }
-        self.view = view
-    }
-    
     init() {
-        super.init(nibName: nil, bundle: nil)
+        super.init(nibName: "ListView", bundle: Bundle.main)
     }
     
     override func viewWillAppear(_ animated: Bool) {

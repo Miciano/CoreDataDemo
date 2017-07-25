@@ -17,13 +17,8 @@ class SavePDFViewController: UIViewController {
         return self.view as! SaveView
     }
     
-    override func loadView() {
-        guard let view = Bundle.main.loadNibNamed("SaveView", owner: self, options: nil)?.last as? SaveView else { return }
-        self.view = view
-    }
-    
     init() {
-        super.init(nibName: nil, bundle: nil)
+        super.init(nibName: "SaveView", bundle: Bundle.main)
     }
     
     override func viewDidLoad() {

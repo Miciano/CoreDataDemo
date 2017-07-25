@@ -18,14 +18,9 @@ class ShowPDFViewController: UIViewController {
         return self.view as! UIWebView
     }
     
-    override func loadView() {
-        guard let view = Bundle.main.loadNibNamed("ShowView", owner: self, options: nil)?.last as? UIWebView else { return }
-        self.view = view
-    }
-    
     init(with name: String) {
         self.name = name
-        super.init(nibName: nil, bundle: nil)
+        super.init(nibName: "ShowView", bundle: Bundle.main)
     }
     
     override func viewDidLoad() {
