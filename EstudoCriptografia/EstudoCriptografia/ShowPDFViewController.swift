@@ -14,8 +14,8 @@ class ShowPDFViewController: UIViewController {
     let name: String
     let fileManager = FileManagerActions()
     
-    var webView: UIWebView? {
-        return self.view as? UIWebView
+    var webView: UIWebView {
+        return self.view as! UIWebView
     }
     
     override func loadView() {
@@ -36,7 +36,7 @@ class ShowPDFViewController: UIViewController {
         let url = URL(fileURLWithPath: "\(pathDirectory)/\(name)")
         let request = URLRequest(url: url)
         //Fazendo load do PDF em uma webView
-        webView?.loadRequest(request)
+        webView.loadRequest(request)
     }
     
     required init?(coder aDecoder: NSCoder) {

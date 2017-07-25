@@ -11,8 +11,8 @@ import UIKit
 
 class ListPDFViewController: UIViewController {
     
-    var tableView: UITableView? {
-        return self.view as? UITableView
+    var tableView: UITableView {
+        return self.view as! UITableView
     }
     
     let fileManager = FileManagerActions()
@@ -30,12 +30,12 @@ class ListPDFViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         //Registro a celula
-        self.tableView?.register(UINib(nibName: "PDFViewCell", bundle: nil), forCellReuseIdentifier: "pdfCell")
+        self.tableView.register(UINib(nibName: "PDFViewCell", bundle: nil), forCellReuseIdentifier: "pdfCell")
         //Caso eu consiga um listagem eu atribuo o delegate e o dataSource
         if let documents = fileManager.listFiles(with: nil) {
             dataSource = documents
-            tableView?.dataSource = self
-            tableView?.delegate = self
+            tableView.dataSource = self
+            tableView.delegate = self
         }
     }
     

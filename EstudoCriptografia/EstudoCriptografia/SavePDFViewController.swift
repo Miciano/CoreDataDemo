@@ -13,8 +13,8 @@ class SavePDFViewController: UIViewController {
     
     let fileManager = FileManagerActions()
     
-    var saveView: SaveView? {
-        return self.view as? SaveView
+    var saveView: SaveView {
+        return self.view as! SaveView
     }
     
     override func loadView() {
@@ -42,12 +42,12 @@ class SavePDFViewController: UIViewController {
             //Salvo o arquivo
             let _ = fileManager.saveFile(with: "teste\(count).pdf", file: fileData)
             
-            saveView?.result.text = "Arquivo salvo com sucesso"
+            saveView.result.text = "Arquivo salvo com sucesso"
             print("=== \(String(describing: fileManager.countFiles(with: nil)))")
         }
         catch {
             //Exibo o erro ao salvar o arquivo
-            saveView?.result.text = "Erro ao salvar o DataFile"
+            saveView.result.text = "Erro ao salvar o DataFile"
             print("Erro ao gerar o DataFile = \(error.localizedDescription)")
         }
     }
