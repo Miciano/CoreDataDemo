@@ -10,7 +10,11 @@ import Foundation
 
 final class FileManagerActions {
     
-    let fileManager = FileManager.default
+    let fileManager: FileManager
+    
+    init(fileManager: FileManager = .default) {
+        self.fileManager = fileManager
+    }
     
     ///    Função usada para salvar arquivos via FileManager
     ///
@@ -22,10 +26,14 @@ final class FileManagerActions {
     func saveFile(with name: String, file: Data) -> Bool {
         //Pego o diretorio de documentos padrao do device
         guard let generalPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first else { return false }
-        
-        if fileManager.createFile(atPath: generalPath.appending("/\(name)"), contents: file, attributes: nil) {
+        let path = generalPath.appending("/\(name)")
+        if fileManager.createFile(atPath: path, contents: file, attributes: nil) {
             print("-- Arquivo salvo com sucesso --")
-            return true
+            if self.excludeBackUp(path: path) {
+                print("-- Arquivo removido da listagem de backup com sucesso --")
+                return true
+            }
+            return false
         }
         else {
             print("XX - Erro ao gravar o arquivo - XX")
@@ -77,6 +85,21 @@ final class FileManagerActions {
         catch {
             print("XX - Erro ao listar arquivos que estão no diretório = \(directory)")
             return nil
+        }
+    }
+    
+    
+    func excludeBackUp(path file: String)-> Bool {
+        var resourceValues = URLResourceValues()
+        resourceValues.isExcludedFromBackup = true
+        var urlFile = URL(fileURLWithPath: file)
+        do {
+            try urlFile.setResourceValues(resourceValues)
+            return true
+        }
+        catch {
+            print("XX - Erro ao tentar tirar o arquivo da listagem de backups")
+            return false
         }
     }
     

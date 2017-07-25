@@ -13,24 +13,28 @@ class SavePDFViewController: UIViewController {
     
     let fileManager = FileManagerActions()
     
-    init() {
-        super.init(nibName: nil, bundle: nil)
-        
-        //Load da view por XIB
+    var saveView: SaveView? {
+        return self.view as? SaveView
+    }
+    
+    override func loadView() {
         guard let view = Bundle.main.loadNibNamed("SaveView", owner: self, options: nil)?.last as? SaveView else { return }
         self.view = view
+    }
+    
+    init() {
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
         //Faço a contagem de elemenots salvos
         guard let count = fileManager.countFiles(with: nil) else { return }
         //Pego o path do arquivo local
         guard let pathFile = Bundle.main.path(forResource: "teste", ofType: ".pdf") else { return }
-        //Marco para retirar esse arquivo na listagem de backup do iCloud ou iTunes
-        var resourceValues = URLResourceValues()
-        resourceValues.isExcludedFromBackup = true
         //Gero a url do path do arquivo
-        var urlFile = URL(fileURLWithPath: pathFile)
-        do { try urlFile.setResourceValues(resourceValues) }
-        catch { print("Erro ao retirar marcação de backup do iCloud ou iTunes") }
+        let urlFile = URL(fileURLWithPath: pathFile)
         
         do {
             //Gero um Data baseado no caminho do arquivo
@@ -38,12 +42,12 @@ class SavePDFViewController: UIViewController {
             //Salvo o arquivo
             let _ = fileManager.saveFile(with: "teste\(count).pdf", file: fileData)
             
-            view.result.text = "Arquivo salvo com sucesso"
+            saveView?.result.text = "Arquivo salvo com sucesso"
             print("=== \(String(describing: fileManager.countFiles(with: nil)))")
         }
         catch {
             //Exibo o erro ao salvar o arquivo
-            view.result.text = "Erro ao salvar o DataFile"
+            saveView?.result.text = "Erro ao salvar o DataFile"
             print("Erro ao gerar o DataFile = \(error.localizedDescription)")
         }
     }

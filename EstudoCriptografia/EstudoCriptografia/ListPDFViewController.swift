@@ -11,23 +11,26 @@ import UIKit
 
 class ListPDFViewController: UIViewController {
     
-    var tableView: UITableView?
+    var tableView: UITableView? {
+        return self.view as? UITableView
+    }
+    
     let fileManager = FileManagerActions()
     var dataSource = [String]()
     
+    override func loadView() {
+        guard let view = Bundle.main.loadNibNamed("ListView", owner: self, options: nil)?.last as? UITableView else { return }
+        self.view = view
+    }
+    
     init() {
         super.init(nibName: nil, bundle: nil)
-        //Load da UITableView por XIB
-        guard let view = Bundle.main.loadNibNamed("ListView", owner: self, options: nil)?.last as? UITableView else { return }
-        self.tableView = view
-        self.view = view
-        
-        //Registro a celula
-        self.tableView?.register(UINib(nibName: "PDFViewCell", bundle: nil), forCellReuseIdentifier: "pdfCell")
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        //Registro a celula
+        self.tableView?.register(UINib(nibName: "PDFViewCell", bundle: nil), forCellReuseIdentifier: "pdfCell")
         //Caso eu consiga um listagem eu atribuo o delegate e o dataSource
         if let documents = fileManager.listFiles(with: nil) {
             dataSource = documents
